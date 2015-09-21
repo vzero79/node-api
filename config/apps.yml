@@ -1,0 +1,24 @@
+default:
+  port: 5000
+  db:
+    uri: mongodb://localhost/node-api
+    options:
+      user: ''
+      pass: ''
+    debug: false
+development:
+  port: 4000
+  db:
+    uri: mongodb://localhost/node-api
+    options:
+      user: ''
+      pass: ''
+    debug: false
+production:
+  port: 3000
+  db:
+    uri: mongodb://localhost/node-api
+    options:
+      user: ''
+      pass: ''
+    debug: false

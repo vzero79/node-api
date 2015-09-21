@@ -1,0 +1,23 @@
+{
+  "name": "node-api",
+  "version": "1.0.0",
+  "description": "'Node Api framework'",
+  "main": "server.js",
+  "engines": {
+    "node": "v4.1.0",
+    "npm": "2.14.3"
+  },
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "express": "^4.13.3",
+    "mongoose": "^4.1.7",
+    "path": "^0.12.7",
+    "yaml-config": "^0.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "leon",
+  "license": "ISC"
+}

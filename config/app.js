@@ -7,7 +7,7 @@ var mongoose = require('./mongoose'),
      express = require('./express'),
        chalk = require('chalk'),
   yml_config = require('yaml-config'),
-  app_config = yml_config.readConfig(__dirname+'/apps.yml');
+  app_config = yml_config.readConfig(process.cwd()+'/config/apps.yml');
 
 // Initialize Models
 mongoose.loadModels();

@@ -8,10 +8,14 @@
     "npm": "2.14.3"
   },
   "dependencies": {
+    "body-parser": "^1.14.0",
     "chalk": "^1.1.1",
     "express": "^4.13.3",
+    "method-override": "^2.3.5",
     "mongoose": "^4.1.7",
+    "passport": "^0.3.0",
     "path": "^0.12.7",
+    "winston": "^1.0.0",
     "yaml-config": "^0.3.0"
   },
   "devDependencies": {},

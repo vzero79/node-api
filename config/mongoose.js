@@ -5,7 +5,7 @@ var    chalk = require('chalk'),
         path = require('path'),
     mongoose = require('mongoose'),
   yml_config = require('yaml-config'),
-  app_config = yml_config.readConfig(__dirname+'/apps.yml');
+  app_config = yml_config.readConfig(process.cwd()+'/config/apps.yml');
 
 module.exports.loadModels = function () {
   // Globbing model files

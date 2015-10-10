@@ -1,4 +1,5 @@
-var winston = require('winston');
+var winston = require('winston'),
+       path = require('path');
 
 winston.emitErrs = true;
 
@@ -8,10 +9,10 @@ function logger(module) {
         transports : [
             new winston.transports.File({
                 level: 'info',
-                filename: process.cwd() + '/logs/all.log',
+                filename: path.resolve('logs/all.log'),
                 handleException: true,
                 json: true,
-                maxSize: 5242880, //5mb 
+                maxSize: 5242880, //5mb
                 maxFiles: 2, 
                 colorize: false
             }),

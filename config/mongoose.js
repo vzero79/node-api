@@ -1,17 +1,20 @@
 /**
  * Module dependencies.
  */
-var    chalk = require('chalk'),
+var        _ = require('lodash'),
+          fs = require('fs'),
+       chalk = require('chalk'),
         path = require('path'),
     mongoose = require('mongoose'),
   yml_config = require('yaml-config'),
-  app_config = yml_config.readConfig(process.cwd()+'/config/apps.yml');
+  app_config = yml_config.readConfig(path.resolve('config/apps.yml'));
 
+// Load all Models
 module.exports.loadModels = function () {
-  // Globbing model files
-  // config.files.server.models.forEach(function (modelPath) {
-  //   require(path.resolve(modelPath));
-  // });
+  var modelPath = path.resolve('apps/models');
+  fs.readdirSync(modelPath).forEach(function(file){
+    require(path.resolve(modelPath, file));
+  });
 };
 
 // Initialize Mongoose

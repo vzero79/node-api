@@ -37,7 +37,7 @@ set :keep_releases, 5
 # Use the locally available SSH keys on the remote server and clone our project's repository using that key
 set :ssh_options, { :forward_agent => false }
 
-set :default_env, { path: "/home/ubuntu/.nvm/v0.10.38/bin:$PATH" }
+set :default_env, { path: "/home/ubuntu/.nvm/v0.10.38/bin:$PATH", node_env: fetch(:stage)  }
 
 namespace :deploy do
 

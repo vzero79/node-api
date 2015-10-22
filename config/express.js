@@ -11,8 +11,8 @@ methodOverride = require('method-override');
  * Initialize application middleware
  */
 module.exports.initMiddleware = function (app) {
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(bodyParser.json({limit: '5mb'}));
+  app.use(bodyParser.urlencoded({limit: '5mb', extended: true }));
   app.use(methodOverride());
   app.use(passport.initialize());
 }

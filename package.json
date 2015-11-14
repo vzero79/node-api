@@ -8,12 +8,14 @@
     "npm": "2.14.3"
   },
   "dependencies": {
+    "async": "^1.5.0",
     "body-parser": "^1.14.0",
     "chalk": "^1.1.1",
     "crypto": "0.0.3",
     "express": "^4.13.3",
     "lodash": "^3.10.1",
     "method-override": "^2.3.5",
+    "mkdirp": "^0.5.1",
     "mongoose": "^4.1.7",
     "passport": "^0.3.0",
     "passport-http-bearer": "^1.0.1",

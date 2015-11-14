@@ -6,6 +6,7 @@ var       mongoose = require('mongoose'),
 
 exports.createPost = function (req, res) {
   var imageString = req.body.image;
+  console.log(imageString);
   imageProcessor.writeBase64ImageToDisk(imageString, function(err){
     if (err) res.json({errors: err});
     else res.json({success: true});
